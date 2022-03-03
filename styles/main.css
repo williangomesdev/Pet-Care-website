@@ -16,9 +16,29 @@
   box-sizing: border-box;
 }
 
+@-webkit-keyframes moveX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+}
+
+@keyframes moveX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-weight: 300;
-  font-size: 62.5%;
   background: #f5e7c6;
   color: #4d4d4d;
   overflow-x: hidden;
@@ -40,9 +60,69 @@ a {
   color: #b098eb;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
 .container {
   max-width: 117rem;
-  background-color: red;
   margin: auto;
   padding: 0 1.5rem;
+}
+
+.home {
+  padding: 18rem 0 8rem;
+}
+.home .row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3rem;
+}
+.home .row .homeText,
+.home .row .homeImg {
+  grid-column: span 6;
+  align-self: center;
+}
+.home .row .homeText h3 {
+  font-size: 4.5rem;
+  text-transform: capitalize;
+  margin: 0 0 2.5rem;
+}
+.home .row .homeImg {
+  position: relative;
+  /* background: green; */
+}
+.home .row .homeImg .fancyBrBox {
+  width: 40rem;
+  height: 40rem;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+.home .row .homeImg .fancyBrBox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border: 0.2rem solid transparent;
+  border-radius: 50% 40%/40% 50%;
+  transform: rotate(150deg);
+  z-index: -1;
+  border-color: #e78484;
+}
+.home .row .homeImg .fancyBrBox img {
+  border-radius: 30% 70% 50% 50%/50%;
+}
+.home .row .homeImg .iconBox {
+  position: absolute;
+  left: -6rem;
+  bottom: -3rem;
+  -webkit-animation: moveX 4s linear infinite;
+          animation: moveX 4s linear infinite;
+}
+.home .row .homeImg .iconBox img {
+  width: 10rem;
 }/*# sourceMappingURL=main.css.map */

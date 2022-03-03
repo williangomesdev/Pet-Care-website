@@ -17,9 +17,22 @@
   box-sizing: border-box;
 }
 
+@keyframes moveX {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-weight: 300;
-  font-size: 62.5%;
   background: $body-bg-color;
   color: $black-70;
   overflow-x: hidden;
@@ -41,9 +54,13 @@ a {
   color: $main-color;
 }
 
-.container{
-    max-width: 117rem;
-    background-color: red;
-    margin: auto;
-    padding: 0 1.5rem;
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 117rem;
+  margin: auto;
+  padding: 0 1.5rem;
 }
