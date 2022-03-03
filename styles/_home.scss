@@ -1,5 +1,21 @@
 .home {
   padding: 18rem 0 8rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20rem;
+    width: 20rem;
+    background: $main-color;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+  }
 
   .row {
     @include grid(12);
@@ -14,10 +30,15 @@
         text-transform: capitalize;
         margin: 0 0 2.5rem;
       }
+
+      p {
+        margin: 0 0 3rem;
+        font-size: 1.4rem;
+      }
     }
     .homeImg {
       position: relative;
-      /* background: green; */
+
       .fancyBrBox {
         width: 40rem;
         height: 40rem;
