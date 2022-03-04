@@ -1,0 +1,35 @@
+.about {
+  .container {
+    .sectionTitle {
+      text-align: center;
+      margin-bottom: 4rem;
+
+      .title {
+        @include titleText(1.8rem);
+        margin: 0 0 0.8rem;
+      }
+
+      .subTitle {
+        @include subTitle(4rem);
+      }
+    }
+
+    .row {
+      .aboutImg,
+      .aboutText {
+        grid-column: span 6;
+      }
+
+      .aboutImg {
+        position: relative;
+
+        .fancyBrBox {
+
+          &::before {
+            border-color:$light-yellow;
+          }
+        }
+      }
+    }
+  }
+}

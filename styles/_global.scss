@@ -17,11 +17,10 @@
   box-sizing: border-box;
 }
 
-::selection{
+::selection {
   color: $white;
   background: $main-color;
 }
-
 
 html {
   font-size: 62.5%;
@@ -107,5 +106,34 @@ img {
 
   &:hover::after {
     right: 1.4rem;
+  }
+}
+
+.row {
+  @include grid(12);
+
+  .fancyBrBox {
+    width: 40rem;
+    height: 40rem;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      border: 0.2rem solid transparent;
+      border-radius: 50% 40% / 40% 50%;
+      transform: rotate(150deg);
+      z-index: -1;
+    }
+
+    img {
+      border-radius: 30% 70% 50% 50% / 50%;
+    }
   }
 }

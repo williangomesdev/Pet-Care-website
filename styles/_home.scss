@@ -40,29 +40,11 @@
       position: relative;
 
       .fancyBrBox {
-        width: 40rem;
-        height: 40rem;
-        margin: auto;
-        position: relative;
-        z-index: 1;
-
+  
         &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 100%;
-          width: 100%;
-          border: 0.2rem solid transparent;
-          border-radius: 50% 40% / 40% 50%;
-          transform: rotate(150deg);
-          z-index: -1;
           border-color: $light-red;
         }
 
-        img {
-          border-radius: 30% 70% 50% 50% / 50%;
-        }
       }
 
       .iconBox {
