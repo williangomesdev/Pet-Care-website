@@ -256,7 +256,6 @@ li {
 }
 
 .about {
-  padding: 8rem 0;
   overflow: hidden;
 }
 .about .container .row .aboutImg,
@@ -319,9 +318,6 @@ li {
   margin: 0 0 1.5rem;
 }
 
-.funFact {
-  padding: 4rem 0;
-}
 .funFact .funFactItem {
   grid-column: span 3;
   margin: 4rem 0;
@@ -374,4 +370,12 @@ li {
 .funFact .funFactItem:nth-child(3) .box::before,
 .funFact .funFactItem:nth-child(3) .box::after {
   background-color: #edd08c;
+}
+
+.pricing .row .pricingItem {
+  grid-column: span 4;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 3rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 1rem #d9c79b;
 }/*# sourceMappingURL=main.css.map */
