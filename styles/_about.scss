@@ -1,4 +1,6 @@
 .about {
+  overflow: hidden;
+
   .container {
     .sectionTitle {
       text-align: center;
@@ -24,9 +26,41 @@
         position: relative;
 
         .fancyBrBox {
-
           &::before {
-            border-color:$light-yellow;
+            border-color: $light-yellow;
+          }
+
+          .iconBox {
+            position: absolute;
+            left: -6rem;
+            bottom: -3rem;
+            animation: moveX 4s linear infinite;
+            img {
+              width: 10rem;
+            }
+          }
+        }
+      }
+      .aboutText {
+        p {
+        }
+        h3 {
+          margin: 1.5rem 0;
+        }
+
+        ul {
+
+          li {
+            margin-bottom: 0.6rem;
+            position: relative;
+            padding-left: 3rem;
+
+            i {
+              color: $main-color;
+              position: absolute;
+              left: 0;
+              top: 0.5rem;
+            }
           }
         }
       }

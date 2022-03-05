@@ -45,6 +45,11 @@ h6 {
   color: $black-90;
 }
 
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 a {
   color: $main-color;
 }
@@ -54,6 +59,13 @@ img {
   vertical-align: middle;
 }
 
+ul {
+  list-style: none;
+}
+
+.p {
+  font-size: 1.4rem;
+}
 .container {
   max-width: 117rem;
   margin: auto;
