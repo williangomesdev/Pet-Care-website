@@ -7,7 +7,7 @@
 @mixin titleText($size) {
   font-size: $size;
   font-weight: 500;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: $main-color;
 }
 

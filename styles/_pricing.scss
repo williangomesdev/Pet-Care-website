@@ -1,0 +1,130 @@
+.pricing {
+  .container {
+    .sectionTitle {
+    }
+  }
+  .row {
+    .pricingItem {
+      grid-column: span 4;
+      background: $white-alpha-40;
+      padding: 3rem;
+      border-radius: 0.8rem;
+      box-shadow: $box-shadow;
+
+      &:hover {
+        .pricingHeader h3 span,
+        .pricingHeader h3::before {
+          transform: translateY(100%);
+        }
+      }
+      .pricingHeader {
+        .price {
+          font-size: 3.5rem;
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          margin-top: 1rem;
+          border-bottom: 1px solid $border-color-1;
+          padding-bottom: 0.5rem;
+
+          span {
+            font-size: 1.6rem;
+            margin-left: 1rem;
+            font-weight: 300;
+          }
+        }
+
+        h3 {
+          font-size: 2.4rem;
+          text-transform: capitalize;
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            bottom: 100%;
+            transition: transform 0.5s ease;
+          }
+        }
+
+        h3,
+        span {
+          display: block;
+          transition: transform 0.5s ease;
+        }
+      }
+      .pricingBody {
+        padding: 1.5rem 0 2rem;
+        ul {
+          li {
+            position: relative;
+            margin-bottom: 0.6rem;
+            padding-left: 2.5rem;
+
+            i {
+              position: absolute;
+              left: 0;
+              top: 0.5rem;
+            }
+          }
+        }
+      }
+      .pricingFooter {
+        border-top: 1px solid $border-color-1;
+        padding-top: 2rem;
+      }
+    }
+
+    .pricingItem.pricing1 {
+      .pricingHeader {
+        .price,
+        h3::before,
+        .pricingBody ul li i.fa-check-circle {
+          color: $light-red;
+        }
+      }
+      .pricingBody {
+      }
+      .pricingFooter {
+          .btn{
+              background-color: $light-red;
+          }
+      }
+    }
+
+    .pricingItem.pricing2 {
+      .pricingHeader {
+        .price,
+        h3::before,
+        .pricingBody ul li i.fa-check-circle {
+          color: $main-color;
+        }
+      }
+      .pricingBody {
+      }
+
+      .pricingFooter {
+       
+      }
+    }
+
+    .pricingItem.pricing3 {
+      .pricingHeader {
+        .price,
+        h3::before,
+        .pricingBody ul li i.fa-check-circle {
+          color: $light-yellow;
+        }
+      }
+      .pricingBody {
+      }
+      .pricingFooter {
+        .btn{
+          background-color: $light-yellow;
+      }
+      }
+    }
+  }
+}
