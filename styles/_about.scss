@@ -1,21 +1,8 @@
 .about {
+  padding: 8rem 0;
   overflow: hidden;
 
   .container {
-    .sectionTitle {
-      text-align: center;
-      margin-bottom: 4rem;
-
-      .title {
-        @include titleText(1.8rem);
-        margin: 0 0 0.8rem;
-      }
-
-      .subTitle {
-        @include subTitle(4rem);
-      }
-    }
-
     .row {
       .aboutImg,
       .aboutText {
@@ -49,7 +36,6 @@
         }
 
         ul {
-
           li {
             margin-bottom: 0.6rem;
             position: relative;

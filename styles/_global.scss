@@ -63,13 +63,28 @@ ul {
   list-style: none;
 }
 
-.p {
+p,
+li {
   font-size: 1.4rem;
 }
 .container {
   max-width: 117rem;
   margin: auto;
   padding: 0 1.5rem;
+
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .title {
+      @include titleText(1.8rem);
+      margin: 0 0 0.8rem;
+    }
+
+    .subTitle {
+      @include subTitle(4rem);
+    }
+  }
 }
 
 .btn {

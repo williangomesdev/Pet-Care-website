@@ -99,7 +99,8 @@ ul {
   list-style: none;
 }
 
-.p {
+p,
+li {
   font-size: 1.4rem;
 }
 
@@ -107,6 +108,24 @@ ul {
   max-width: 117rem;
   margin: auto;
   padding: 0 1.5rem;
+}
+.container .sectionTitle {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.container .sectionTitle .title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #b098eb;
+  margin: 0 0 0.8rem;
+}
+.container .sectionTitle .subTitle {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: capitalize;
+  line-height: 1.2;
 }
 
 .btn {
@@ -203,9 +222,7 @@ ul {
   transform: translate(-50%, -50%);
 }
 .home .row {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 3rem;
+  grid-column: span 6;
 }
 .home .row .homeText,
 .home .row .homeImg {
@@ -219,6 +236,7 @@ ul {
 }
 .home .row .homeText p {
   margin: 0 0 3rem;
+  font-size: 1.4rem;
 }
 .home .row .homeImg {
   position: relative;
@@ -238,25 +256,8 @@ ul {
 }
 
 .about {
+  padding: 8rem 0;
   overflow: hidden;
-}
-.about .container .sectionTitle {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-.about .container .sectionTitle .title {
-  font-size: 1.8rem;
-  font-weight: 500;
-  text-transform: capitalize;
-  color: #b098eb;
-  margin: 0 0 0.8rem;
-}
-.about .container .sectionTitle .subTitle {
-  font-size: 4rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  text-transform: capitalize;
-  line-height: 1.2;
 }
 .about .container .row .aboutImg,
 .about .container .row .aboutText {
@@ -291,4 +292,29 @@ ul {
   position: absolute;
   left: 0;
   top: 0.5rem;
+}
+
+.services .container .row .servicesItem {
+  grid-column: span 6;
+  padding: 3rem 3rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-shadow: 0 0 1rem #d9c79b;
+}
+.services .container .row .servicesItem .imgBox {
+  width: 12rem;
+  flex-shrink: 0;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: 0.1rem solid #d9c79b;
+}
+.services .container .row .servicesItem .imgBox img {
+  border-radius: 2rem;
+}
+.services .container .row .servicesItem .text h3 {
+  text-transform: capitalize;
+  margin: 0 0 1.5rem;
 }/*# sourceMappingURL=main.css.map */
