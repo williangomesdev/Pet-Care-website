@@ -43,6 +43,18 @@
   font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5e7c6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b098eb;
+}
+
 ::before,
 ::after {
   box-sizing: border-box;
@@ -591,4 +603,50 @@ li {
 }
 .contact .container .row .contactForm .contactBox form .btn {
   margin-top: 2rem;
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 20rem;
+  width: 20rem;
+  background: #e78484;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(50%, 50%);
+}
+.footer .footerTop {
+  padding: 6rem 0;
+  border-top: 0.1rem solid rgba(217, 199, 155, 0.4);
+}
+.footer .footerTop .container .row .footerItem {
+  grid-column: span 4;
+}
+.footer .footerTop .container .row .footerItem h3 {
+  text-transform: capitalize;
+  margin: 0 0 1.5rem;
+}
+.footer .footerTop .container .row .footerItem ul li {
+  margin-bottom: 0.6rem;
+}
+.footer .footerTop .container .row .footerItem ul li a {
+  display: inline-block;
+  color: #4d4d4d;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+.footer .footerTop .container .row .footerItem ul li a:hover {
+  color: #b098eb;
+}
+.footer .footerBottom {
+  border-top: 0.1rem solid rgba(217, 199, 155, 0.4);
+  padding: 2rem 0;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
