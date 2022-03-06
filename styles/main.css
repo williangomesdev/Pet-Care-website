@@ -254,6 +254,7 @@ li {
   display: flex;
   flex-wrap: nowrap;
   background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 .header .headerMain .navToggler i {
   transform: scale(3);
@@ -264,6 +265,9 @@ li {
   top: 100%;
   margin-top: 0.8rem;
   visibility: hidden;
+}
+.header .headerMain .nav.active {
+  visibility: visible;
 }
 .header .headerMain .nav ul li {
   background-color: rgba(255, 255, 255, 0.4);

@@ -36,6 +36,7 @@
       display: flex;
       flex-wrap: nowrap;
       background-color: $white-alpha-50;
+      cursor: pointer;
 
       i {
         transform: scale(3);
@@ -46,7 +47,12 @@
       right: 0;
       top: 100%;
       margin-top: 0.8rem;
+     
       visibility: hidden;
+
+      &.active{
+          visibility: visible;
+      }
 
       ul {
         li {
