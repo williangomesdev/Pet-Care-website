@@ -452,4 +452,66 @@ li {
 }
 .pricing .row .pricingItem.pricing3 .pricingFooter .btn {
   background-color: #edd08c;
+}
+
+.contact .container .row .contactDetails,
+.contact .container .row .contactForm {
+  grid-column: span 6;
+}
+.contact .container .row .contactDetails .sectionTitle {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.contact .container .row .contactDetails .text1 {
+  margin-bottom: 4rem;
+}
+.contact .container .row .contactDetails .contactInfo .contactInfoItem {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 3rem;
+}
+.contact .container .row .contactDetails .contactInfo .contactInfoItem i {
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  font-size: 1.4rem;
+}
+.contact .container .row .contactDetails .socialLinks {
+  margin-top: 2.5rem;
+}
+.contact .container .row .contactDetails .socialLinks ul {
+  display: inline-flex;
+}
+.contact .container .row .contactDetails .socialLinks ul li {
+  margin-right: 1.5rem;
+}
+.contact .container .row .contactDetails .socialLinks ul li a {
+  height: 3.5rem;
+  width: 3.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #b098eb;
+  border-radius: 50%;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.contact .container .row .contactDetails .socialLinks ul li a:hover {
+  color: white;
+}
+.contact .container .row .contactDetails .socialLinks ul li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #b098eb;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+.contact .container .row .contactDetails .socialLinks ul li a:hover:hover::after {
+  transform: scale(1);
 }/*# sourceMappingURL=main.css.map */
