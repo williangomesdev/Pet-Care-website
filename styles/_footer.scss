@@ -1,0 +1,56 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 20rem;
+    width: 20rem;
+    background: $light-red;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(50%, 50%);
+  }
+
+  .footerTop {
+    padding: 6rem 0;
+    border-top: 0.1rem solid $border-color-2;
+    .container {
+      .row {
+        .footerItem {
+          grid-column: span 4;
+          h3 {
+            text-transform: capitalize;
+            margin: 0 0 1.5rem;
+          }
+          p {
+          }
+          ul {
+            li {
+              margin-bottom: 0.6rem;
+              a {
+                display: inline-block;
+                color: $black-70;
+                text-transform: capitalize;
+                transition: color 0.3s ease;
+
+                &:hover {
+                  color: $main-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footerBottom {
+    border-top: 0.1rem solid $border-color-2;
+    padding: 2rem 0;
+    text-align: center;
+  }
+}
