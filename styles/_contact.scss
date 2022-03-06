@@ -1,0 +1,154 @@
+.contact {
+  overflow: hidden;
+  .container {
+    .row {
+      .contactDetails,
+      .contactForm {
+        grid-column: span 6;
+        position: relative;
+      }
+      .contactDetails {
+        .sectionTitle {
+          text-align: left;
+          margin-bottom: 1.5rem;
+        }
+        .text1 {
+          margin-bottom: 4rem;
+        }
+        .contactInfo {
+          .contactInfoItem {
+            position: relative;
+            margin-bottom: 1rem;
+            padding-left: 3rem;
+            i {
+              position: absolute;
+              left: 0;
+              top: 0.7rem;
+              font-size: 1.4rem;
+            }
+            p {
+            }
+          }
+        }
+        .socialLinks {
+          margin-top: 2.5rem;
+
+          ul {
+            display: inline-flex;
+            li {
+              margin-right: 1.5rem;
+
+              a {
+                height: 3.5rem;
+                width: 3.5rem;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border: 0.1rem solid $main-color;
+                border-radius: 50%;
+                transition: color 0.3s ease;
+                position: relative;
+
+                &:hover {
+                  color: $white;
+
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $main-color;
+                    border-radius: 50%;
+                    z-index: -1;
+                    transform: scale(0);
+                    transition: transform 0.5s ease;
+                  }
+
+                  &:hover::after {
+                    transform: scale(1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .contactForm {
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          transform: rotate(10deg);
+        }
+
+        &::after {
+          left: -1.5rem;
+          bottom: 0;
+          width: 2rem;
+          height: 2rem;
+          background-color: $main-color;
+          z-index: -1;
+        }
+        &::before {
+          right: -0.4rem;
+          top: 0;
+          width: 4rem;
+          height: 4rem;
+          background-color: $light-red;
+          z-index: -1;
+        }
+        .iconBox {
+          width: 12rem;
+          animation: moveX 4s linear infinite;
+        }
+        .contactBox {
+          background: $white-alpha-40;
+          padding: 5rem;
+          border-radius: 3rem;
+          box-shadow: $box-shadow;
+          form {
+            .inputBox {
+              margin-bottom: 2rem;
+              .inputControl {
+                display: block;
+                width: 100%;
+                height: 4.2rem;
+                background-color: transparent;
+                color: $black-90;
+                border: none;
+                border-bottom: 0.1rem solid $border-color-1;
+                font-size: 1.6rem;
+                font-family: inherit;
+
+                &:focus {
+                  outline: none;
+                }
+
+                &::placeholder {
+                  color: $black-70;
+                }
+              }
+            }
+            textarea.inputControl {
+              color: $black-90;
+              border: none;
+              border-bottom: 0.1rem solid $border-color-1;
+              font-size: 1.6rem;
+              font-family: inherit;
+              background-color: transparent;
+              resize: none;
+              height: 15rem;
+              width: 100%;
+            }
+
+            .btn {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

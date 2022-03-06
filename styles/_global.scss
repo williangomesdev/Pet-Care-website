@@ -100,6 +100,7 @@ li {
   vertical-align: middle;
   user-select: none;
   position: relative;
+  cursor: pointer;
 
   &::before,
   &::after {

@@ -144,6 +144,7 @@ li {
       -ms-user-select: none;
           user-select: none;
   position: relative;
+  cursor: pointer;
 }
 .btn::before, .btn::after {
   content: "";
@@ -454,9 +455,13 @@ li {
   background-color: #edd08c;
 }
 
+.contact {
+  overflow: hidden;
+}
 .contact .container .row .contactDetails,
 .contact .container .row .contactForm {
   grid-column: span 6;
+  position: relative;
 }
 .contact .container .row .contactDetails .sectionTitle {
   text-align: left;
@@ -514,4 +519,76 @@ li {
 }
 .contact .container .row .contactDetails .socialLinks ul li a:hover:hover::after {
   transform: scale(1);
+}
+.contact .container .row .contactForm::before, .contact .container .row .contactForm::after {
+  content: "";
+  position: absolute;
+  transform: rotate(10deg);
+}
+.contact .container .row .contactForm::after {
+  left: -1.5rem;
+  bottom: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: #b098eb;
+  z-index: -1;
+}
+.contact .container .row .contactForm::before {
+  right: -0.4rem;
+  top: 0;
+  width: 4rem;
+  height: 4rem;
+  background-color: #e78484;
+  z-index: -1;
+}
+.contact .container .row .contactForm .iconBox {
+  width: 12rem;
+  -webkit-animation: moveX 4s linear infinite;
+          animation: moveX 4s linear infinite;
+}
+.contact .container .row .contactForm .contactBox {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 5rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 1rem #d9c79b;
+}
+.contact .container .row .contactForm .contactBox form .inputBox {
+  margin-bottom: 2rem;
+}
+.contact .container .row .contactForm .contactBox form .inputBox .inputControl {
+  display: block;
+  width: 100%;
+  height: 4.2rem;
+  background-color: transparent;
+  color: #1a1a1a;
+  border: none;
+  border-bottom: 0.1rem solid #d9c79b;
+  font-size: 1.6rem;
+  font-family: inherit;
+}
+.contact .container .row .contactForm .contactBox form .inputBox .inputControl:focus {
+  outline: none;
+}
+.contact .container .row .contactForm .contactBox form .inputBox .inputControl::-moz-placeholder {
+  color: #4d4d4d;
+}
+.contact .container .row .contactForm .contactBox form .inputBox .inputControl:-ms-input-placeholder {
+  color: #4d4d4d;
+}
+.contact .container .row .contactForm .contactBox form .inputBox .inputControl::placeholder {
+  color: #4d4d4d;
+}
+.contact .container .row .contactForm .contactBox form textarea.inputControl {
+  color: #1a1a1a;
+  border: none;
+  border-bottom: 0.1rem solid #d9c79b;
+  font-size: 1.6rem;
+  font-family: inherit;
+  background-color: transparent;
+  resize: none;
+  height: 15rem;
+  width: 100%;
+}
+.contact .container .row .contactForm .contactBox form .btn {
+  margin-top: 2rem;
 }/*# sourceMappingURL=main.css.map */
