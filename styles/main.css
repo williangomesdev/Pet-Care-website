@@ -216,6 +216,91 @@ li {
   border-radius: 30% 70% 50% 50%/50%;
 }
 
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0.8rem 0;
+  z-index: 2;
+}
+.header .headerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header .headerMain .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.header .headerMain .logo a {
+  width: 3.2rem;
+}
+.header .headerMain .logo p {
+  font-size: 2.8rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.header .headerMain .navToggler {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.header .headerMain .navToggler i {
+  transform: scale(3);
+}
+.header .headerMain .nav {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.8rem;
+  visibility: hidden;
+}
+.header .headerMain .nav ul li {
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  transform: translateY(2rem);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+}
+.header .headerMain .nav ul li:first-child {
+  border-radius: 1rem 1rem 0 0;
+}
+.header .headerMain .nav ul li:last-child {
+  border-radius: 0 0 1rem 1rem;
+}
+.header .headerMain .nav ul li a {
+  display: block;
+  padding: 0.8rem 3rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-transform: capitalize;
+  position: relative;
+}
+.header .headerMain .nav ul li a::before {
+  content: "";
+  height: 0.2rem;
+  width: 0;
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(50%);
+  background-color: #b098eb;
+  transition: width 0.3s ease;
+}
+.header .headerMain .nav ul li a:hover::before {
+  width: 1.2rem;
+}
+
 .home {
   padding: 18rem 0 8rem;
   position: relative;
