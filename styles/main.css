@@ -185,6 +185,34 @@ li {
   border-radius: 30% 70% 50% 50%/50%;
 }
 
+.switchBtn {
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  border-radius: 50%;
+  color: #1a1a1a;
+  background-color: transparent;
+}
+.switchBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #b098eb;
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.3s ease;
+  transform: scale(0);
+}
+.switchBtn:hover::before {
+  transform: scale(1);
+}
+
 @-webkit-keyframes moveX {
   0%, 100% {
     transform: translateX(0);
