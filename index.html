@@ -20,22 +20,23 @@
                     <p>Clinica para pets</p>
                 </div>
                 <div class="navToggler jsNavToggler">
-                    <i class="fas fas fa-bars"></i>
+                    <i class="fas fas fa-bars open"></i>
+                    <i class="fas fas fa-times close"></i>
                 </div>
                 <nav class="nav jsNav">
                     <ul>
-                        <li><a href="#home">Inicio</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#pricing">Preços</a></li>
-                        <li><a href="#contect">Contato</a></li>
+                        <li style="--item:0"><a href="#home">Inicio</a></li>
+                        <li style="--item:1"><a href="#about">Sobre</a></li>
+                        <li style="--item:2"><a href="#services">Serviços</a></li>
+                        <li style="--item:3"><a href="#pricing">Preços</a></li>
+                        <li style="--item:4"><a href="#contact">Contato</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <main>
-        <section class="home">
+        <section class="home" id="home">
             <div class="container">
                 <div class="row">
                     <div class="homeText">
@@ -57,7 +58,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about sectionPadding" id="about">
             <div class="container">
                 <div class="sectionTitle">
                     <h2 class="title">Sobre nós</h2>
@@ -90,7 +91,7 @@
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services sectionPadding" id="services">
             <div class="container">
                 <div class="sectionTitle">
                     <h2 class="title">Serviços</h2>
@@ -151,7 +152,7 @@
                 </div>
             </div>
         </section>
-        <section class="funFact">
+        <section class="funFact sectionPadding">
             <div class="container">
                 <div class="row">
                     <div class="funFactItem">
@@ -184,7 +185,7 @@
                 </div>
             </div>
         </section>
-        <section class="pricing">
+        <section class="pricing sectionPadding" id="pricing">
             <div class="container">
                 <div class="sectionTitle">
                     <h2 class="title">Preços</h2>
@@ -259,7 +260,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact sectionPadding" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="contactDetails">

@@ -1,57 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
-@-webkit-keyframes moveX {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(20%);
-  }
-}
-@keyframes moveX {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(20%);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 * {
-  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
   font-style: none;
   transform: all 0.2s linear;
-  font-family: "Poppins", sans-serif;
 }
 
-::-webkit-scrollbar {
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
   width: 0.5rem;
 }
-
-::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background-color: #f5e7c6;
 }
-
-::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background-color: #b098eb;
 }
 
@@ -70,15 +40,10 @@
   background: #b098eb;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
   font-weight: 300;
   background: #f5e7c6;
   color: #4d4d4d;
-  overflow-x: hidden;
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
 }
@@ -114,6 +79,10 @@ ul {
 p,
 li {
   font-size: 1.4rem;
+}
+
+.sectionPadding {
+  padding: 8rem 0;
 }
 
 .container {
@@ -216,6 +185,39 @@ li {
   border-radius: 30% 70% 50% 50%/50%;
 }
 
+@-webkit-keyframes moveX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+}
+
+@keyframes moveX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header {
   position: fixed;
   left: 0;
@@ -253,11 +255,22 @@ li {
   justify-content: center;
   display: flex;
   flex-wrap: nowrap;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5) transparent;
   cursor: pointer;
 }
-.header .headerMain .navToggler i {
+.header .headerMain .navToggler i.open {
   transform: scale(3);
+  display: block;
+}
+.header .headerMain .navToggler i.open.active {
+  display: none;
+}
+.header .headerMain .navToggler i.close {
+  transform: scale(3);
+  display: none;
+}
+.header .headerMain .navToggler i.close.active {
+  display: block;
 }
 .header .headerMain .nav {
   position: absolute;
@@ -265,9 +278,15 @@ li {
   top: 100%;
   margin-top: 0.8rem;
   visibility: hidden;
+  transition: visibility 0s ease 0.5s;
 }
 .header .headerMain .nav.active {
   visibility: visible;
+  transition-delay: 0s;
+}
+.header .headerMain .nav.active li {
+  opacity: 1;
+  transform: translateY(0);
 }
 .header .headerMain .nav ul li {
   background-color: rgba(255, 255, 255, 0.4);
@@ -275,6 +294,9 @@ li {
   transform: translateY(2rem);
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: calc(0.05s * var(--item));
 }
 .header .headerMain .nav ul li:first-child {
   border-radius: 1rem 1rem 0 0;
