@@ -24,7 +24,7 @@
         font-size: 2.8rem;
         text-transform: capitalize;
         font-weight: 600;
-        color: $black-90;
+        color: var(--black-90);
       }
     }
     .navToggler {
@@ -35,7 +35,7 @@
       justify-content: center;
       display: flex;
       flex-wrap: nowrap;
-      background-color: $white-alpha-50 transparent;
+      background-color: var(--white-alpha-50) transparent;
       cursor: pointer;
 
       i.open {
@@ -76,7 +76,7 @@
 
       ul {
         li {
-          background-color: $white-alpha-40;
+          background-color: var(--white-alpha-40);
           text-align: center;
           transform: translateY(2rem);
           backdrop-filter: blur(0.5rem);
@@ -96,7 +96,7 @@
             display: block;
             padding: 0.8rem 3rem;
             font-weight: 500;
-            color: $black-90;
+            color: var(--black-90);
             text-transform: capitalize;
             position: relative;
 
@@ -108,7 +108,7 @@
               left: 0.5rem;
               top: 50%;
               transform: translateY(50%);
-              background-color: $main-color;
+              background-color: var(--main-color);
               transition: width 0.3s ease;
             }
 

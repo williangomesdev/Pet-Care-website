@@ -11,7 +11,7 @@
     top: 0;
     height: 20rem;
     width: 20rem;
-    background: $main-color;
+    background: var(--main-color);
     border-radius: 50%;
     z-index: -1;
     transform: translate(-50%, -50%);
@@ -42,7 +42,7 @@
       .fancyBrBox {
   
         &::before {
-          border-color: $light-red;
+          border-color: var(--light-red);
         }
 
       }

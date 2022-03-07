@@ -6,10 +6,10 @@
   .row {
     .pricingItem {
       grid-column: span 4;
-      background: $white-alpha-40;
+      background: var(--white-alpha-40);
       padding: 3rem;
       border-radius: 0.8rem;
-      box-shadow: $box-shadow;
+      box-shadow: var(--box-shadow);
 
       &:hover {
         .pricingHeader h3 span,
@@ -24,7 +24,7 @@
           align-items: center;
           font-weight: bold;
           margin-top: 1rem;
-          border-bottom: 1px solid $border-color-1;
+          border-bottom: 1px solid var(--border-color-1);
           padding-bottom: 0.5rem;
 
           span {
@@ -72,7 +72,7 @@
         }
       }
       .pricingFooter {
-        border-top: 1px solid $border-color-1;
+        border-top: 1px solid var(--border-color-1);
         padding-top: 2rem;
       }
     }
@@ -82,14 +82,14 @@
         .price,
         h3::before,
         .pricingBody ul li i.fa-check-circle {
-          color: $light-red;
+          color: var(--light-red);
         }
       }
       .pricingBody {
       }
       .pricingFooter {
           .btn{
-              background-color: $light-red;
+              background-color: var(--light-red);
           }
       }
     }
@@ -99,7 +99,7 @@
         .price,
         h3::before,
         .pricingBody ul li i.fa-check-circle {
-          color: $main-color;
+          color: var(--main-color);
         }
       }
       .pricingBody {
@@ -115,14 +115,14 @@
         .price,
         h3::before,
         .pricingBody ul li i.fa-check-circle {
-          color: $light-yellow;
+          color: var(--light-red);
         }
       }
       .pricingBody {
       }
       .pricingFooter {
         .btn{
-          background-color: $light-yellow;
+          background-color: var(--light-red);
       }
       }
     }

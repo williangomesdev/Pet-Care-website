@@ -14,7 +14,7 @@
 
         .fancyBrBox {
           &::before {
-            border-color: $light-yellow;
+            border-color: var(--light-yellow);
           }
 
           .iconBox {
@@ -42,7 +42,7 @@
             padding-left: 3rem;
 
             i {
-              color: $main-color;
+              color: var(--main-color)-color;
               position: absolute;
               left: 0;
               top: 0.5rem;

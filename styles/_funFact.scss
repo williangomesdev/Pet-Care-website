@@ -50,7 +50,7 @@
     &:nth-child(1) {
       .box::before,
       .box::after {
-        background-color: $light-red;
+        background-color: var(--light-red);
       }
     }
 
@@ -58,14 +58,14 @@
     &:nth-child(4) {
       .box::before,
       .box::after {
-        background-color: $main-color;
+        background-color: var(--main-color);
       }
     }
 
     &:nth-child(3) {
       .box::before,
       .box::after {
-        background-color: $light-yellow;
+        background-color: var(--light-yellow);
       }
     }
   }

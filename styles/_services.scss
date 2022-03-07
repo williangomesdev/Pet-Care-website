@@ -5,18 +5,18 @@
         grid-column: span 6;
         padding: 3rem 3rem;
         border-radius: 1rem;
-        background: $white-alpha-40;
+        background: var(--white-alpha-40);
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        box-shadow: $box-shadow;
+        box-shadow: var(--box-shadow);
 
         .imgBox {
           width: 12rem;
           flex-shrink: 0;
           padding: 0.8rem;
           border-radius: 2rem;
-          border: 0.1rem solid $border-color-1;
+          border: 0.1rem solid var(--border-color-1);
           img {
             border-radius: 2rem;
           }

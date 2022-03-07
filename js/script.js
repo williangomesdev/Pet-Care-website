@@ -1,4 +1,6 @@
 //Navbar clique
+let bodySelector = document.querySelector("body");
+const lightAndDarkModeButtonToggle = document.querySelector(".jsSwitchBtn");
 const navToggler = document.querySelector(".jsNavToggler");
 const navList = document.querySelector(".jsNav");
 const openButtonMenu = document.querySelector(".open");
@@ -26,9 +28,12 @@ function compareClickInOrOut() {
   });
 }
 
+//Dark-Mode
+function darkModeToggle() {
+  console.log("cliquei");
+  bodySelector.classList.toggle("dark");
+}
+
 navToggler.addEventListener("click", navToggle);
 navToggler.addEventListener("click", compareClickInOrOut);
-
-
-
-
+lightAndDarkModeButtonToggle.addEventListener("click", darkModeToggle);
