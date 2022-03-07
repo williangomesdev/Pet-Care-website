@@ -5,6 +5,12 @@
   width: 100%;
   padding: 0.8rem 0;
   z-index: 2;
+  transition: 0.5s;
+
+  &.active {
+    padding: 2rem 0;
+    background-color: var(--main-color);
+  }
 
   .headerMain {
     display: flex;

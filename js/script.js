@@ -1,11 +1,13 @@
-//Navbar clique
-let bodySelector = document.querySelector("body");
+const htmlSelector = document.querySelector("html");
+const bodySelector = document.querySelector("body");
+const headerSelector = document.querySelector(".header");
 const lightAndDarkModeButtonToggle = document.querySelector(".jsSwitchBtn");
 const navToggler = document.querySelector(".jsNavToggler");
 const navList = document.querySelector(".jsNav");
 const openButtonMenu = document.querySelector(".open");
 const closeButtonMenu = document.querySelector(".close");
 
+//Navbar clique
 function navToggle() {
   navList.classList.toggle("active");
   navToggler.classList.toggle("active");
@@ -30,9 +32,16 @@ function compareClickInOrOut() {
 
 //Dark-Mode
 function darkModeToggle() {
-  console.log("cliquei");
   bodySelector.classList.toggle("dark");
 }
+
+window.onscroll = () => {
+  if (window.scrollY > 0) {
+    headerSelector.classList.add("active");
+  } else {
+    headerSelector.classList.remove("active");
+  }
+};
 
 navToggler.addEventListener("click", navToggle);
 navToggler.addEventListener("click", compareClickInOrOut);
