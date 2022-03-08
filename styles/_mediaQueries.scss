@@ -1,0 +1,205 @@
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 0.8rem 3rem;
+
+    &.active {
+      padding: 2rem 3rem;
+    }
+  }
+
+  .sectionPadding {
+    padding: 8rem 3rem;
+  }
+  .container {
+    .sectionTitle {
+      .title {
+      }
+      .subTitle {
+        font-size: 3.2rem;
+      }
+      .row {
+        .fancyBrBox {
+          width: 28rem;
+          height: 28rem;
+        }
+
+        .homeText h3 {
+          font-size: 3.5rem;
+        }
+      }
+    }
+  }
+
+  .home {
+    padding: 18rem 2rem 8rem 2rem;
+  }
+
+  .services {
+    .container {
+      .row {
+        .servicesItem {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          .imgBox {
+            margin-bottom: 2rem;
+          }
+
+          .text {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .funFact {
+    .container {
+      .row {
+        .funFactItem {
+          grid-column: span 6;
+        }
+      }
+    }
+  }
+
+  .pricing {
+    .container {
+      .row {
+        .pricingItem {
+          grid-column: span 6;
+        }
+      }
+    }
+  }
+
+  .contact {
+    .container {
+      .row {
+        .contactForm {
+          .contactBox {
+            padding: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footerTop {
+      .container {
+        .row {
+          .footerItem {
+            grid-column: span 6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+  .about {
+    .container {
+      .row {
+        .aboutImg,
+        .aboutText {
+          grid-column: span 12;
+        }
+        .aboutImg {
+          margin-bottom: 4rem;
+        }
+
+        .aboutText {
+          p {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    .container {
+      .row {
+        .contactDetails,
+        .contactForm {
+          grid-column: span 12;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+    html {
+        font-size: 40%;
+      }
+  .home {
+    .container {
+      .row {
+        .homeText,
+        .homeImg {
+          grid-column: span 12;
+        }
+      }
+    }
+  }
+
+  .services {
+    .container {
+      .row {
+        .servicesItem {
+          grid-column: span 12;
+        }
+      }
+    }
+  }
+
+  .pricing {
+    .container {
+      .row {
+        .pricingItem {
+          grid-column: span 12;
+          .pricingHeader {
+            text-align: center;
+
+            .price {
+              justify-content: center;
+            }
+          }
+          .pricingFooter {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    .container {
+      .row {
+        .contactForm {
+          .iconBox {
+            margin: auto;
+          }
+          .contactBox {
+            .buttonSendMensage {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

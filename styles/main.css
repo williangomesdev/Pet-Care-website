@@ -829,4 +829,120 @@ li {
   border-top: 0.1rem solid var(--border-color-2);
   padding: 2rem 0;
   text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 0.8rem 3rem;
+  }
+  .header.active {
+    padding: 2rem 3rem;
+  }
+
+  .sectionPadding {
+    padding: 8rem 3rem;
+  }
+
+  .container .sectionTitle .subTitle {
+    font-size: 3.2rem;
+  }
+  .container .sectionTitle .row .fancyBrBox {
+    width: 28rem;
+    height: 28rem;
+  }
+  .container .sectionTitle .row .homeText h3 {
+    font-size: 3.5rem;
+  }
+
+  .home {
+    padding: 18rem 2rem 8rem 2rem;
+  }
+
+  .services .container .row .servicesItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .services .container .row .servicesItem .imgBox {
+    margin-bottom: 2rem;
+  }
+  .services .container .row .servicesItem .text {
+    padding-left: 0;
+  }
+
+  .funFact .container .row .funFactItem {
+    grid-column: span 6;
+  }
+
+  .pricing .container .row .pricingItem {
+    grid-column: span 6;
+  }
+
+  .contact .container .row .contactForm .contactBox {
+    padding: 3rem;
+  }
+
+  .footer .footerTop .container .row .footerItem {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+
+  .about .container .row .aboutImg,
+.about .container .row .aboutText {
+    grid-column: span 12;
+  }
+  .about .container .row .aboutImg {
+    margin-bottom: 4rem;
+  }
+  .about .container .row .aboutText p {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact .container .row .contactDetails,
+.contact .container .row .contactForm {
+    grid-column: span 12;
+  }
+}
+@media (max-width: 575px) {
+  html {
+    font-size: 40%;
+  }
+
+  .home .container .row .homeText,
+.home .container .row .homeImg {
+    grid-column: span 12;
+  }
+
+  .services .container .row .servicesItem {
+    grid-column: span 12;
+  }
+
+  .pricing .container .row .pricingItem {
+    grid-column: span 12;
+  }
+  .pricing .container .row .pricingItem .pricingHeader {
+    text-align: center;
+  }
+  .pricing .container .row .pricingItem .pricingHeader .price {
+    justify-content: center;
+  }
+  .pricing .container .row .pricingItem .pricingFooter {
+    text-align: center;
+  }
+
+  .contact .container .row .contactForm .iconBox {
+    margin: auto;
+  }
+  .contact .container .row .contactForm .contactBox .buttonSendMensage {
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */

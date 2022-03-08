@@ -1,4 +1,3 @@
-const htmlSelector = document.querySelector("html");
 const bodySelector = document.querySelector("body");
 const headerSelector = document.querySelector(".header");
 const lightAndDarkModeButtonToggle = document.querySelector(".jsSwitchBtn");
@@ -35,6 +34,7 @@ function darkModeToggle() {
   bodySelector.classList.toggle("dark");
 }
 
+//Scroll efeito no header
 window.onscroll = () => {
   if (window.scrollY > 0) {
     headerSelector.classList.add("active");
