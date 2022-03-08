@@ -1,3 +1,4 @@
+const preloaderPage = document.querySelector(".jsPreloader");
 const bodySelector = document.querySelector("body");
 const headerSelector = document.querySelector(".header");
 const lightAndDarkModeButtonToggle = document.querySelector(".jsSwitchBtn");
@@ -14,6 +15,8 @@ function navToggle() {
   closeButtonMenu.classList.toggle("active");
 }
 
+navToggler.addEventListener("click", navToggle);
+
 //Esconder a nav bar caso seja clicado fora do menu
 function compareClickInOrOut() {
   document.addEventListener("click", (event) => {
@@ -29,10 +32,14 @@ function compareClickInOrOut() {
   });
 }
 
+navToggler.addEventListener("click", compareClickInOrOut);
+
 //Dark-Mode
 function darkModeToggle() {
   bodySelector.classList.toggle("dark");
 }
+
+lightAndDarkModeButtonToggle.addEventListener("click", darkModeToggle);
 
 //Scroll efeito no header
 window.onscroll = () => {
@@ -43,6 +50,10 @@ window.onscroll = () => {
   }
 };
 
-navToggler.addEventListener("click", navToggle);
-navToggler.addEventListener("click", compareClickInOrOut);
-lightAndDarkModeButtonToggle.addEventListener("click", darkModeToggle);
+//Preloader aparecer e desaparecer
+window.addEventListener("load", () => {
+  preloaderPage.classList.add("fadeOut");
+  setTimeout(() => {
+    preloaderPage.style.display = "none";
+  }, 600);
+});

@@ -28,6 +28,29 @@
   --box-shadow: 0 0 1rem var(--shadow-color);
 }
 
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+
+  &.fadeOut{
+    opacity: 0;
+  }
+
+  img {
+    width: 5rem;
+    animation: zoomInOut 1s linear infinite;
+  }
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -72,7 +95,7 @@ body {
     --shadow-color: hsla(0, 0%, 0%, 0.15);
     --box-shadow: 0 0 1rem var(--shadow-color)-dark-mode;
 
-    .switchBtn{
+    .switchBtn {
       & .fa-moon {
         display: none;
       }
